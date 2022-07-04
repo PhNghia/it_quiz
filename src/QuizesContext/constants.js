@@ -1,0 +1,6 @@
+export const SUBMIT_ANSWERS = 'submit_answers'
+export const CHOOSE_TYPE_QUIZ = 'choose_type_quiz'
+export const CHOOSE_CATEGORY_QUIZ = 'choose_category_quiz'
+export const RESET_SET_VALUE = 'reset_set_value'
+export const UPDATE_VALUE = 'update_value'
+export const SET_PAGE = 'set_page'

@@ -1,0 +1,136 @@
+.container-questions {
+    transform: translateX(0);
+}
+
+.questions {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.question-btn {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 5px 12px 1px;
+    font-size: 10px;
+    color: #757575;
+    border-radius: 2px;
+    text-transform: uppercase;
+    letter-spacing: 1.7px;
+    line-height: 1.9;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+    transition: all 200ms linear;
+}
+
+.question-btn:hover {
+    box-shadow: 0 0 60px rgb(0 0 0 / 6%);
+}
+
+.question-btn.answered-question {
+    background-color: #e9ecf0;
+    border-color: #e9ecf0;
+}
+
+.question-btn.answered-question:hover {
+    background-color: #dde2e8;
+    border-color: #dde2e8;
+    box-shadow: 0 1px 10px rgb(233 236 240 / 40%);
+}
+
+.question-btn.current-question {
+    background-color: var(--purple);
+    color: #fff;
+}
+
+.question-btn.current-question:hover {
+    background-color: #865cda;
+    border-color: #865cda;
+    box-shadow: 0 1px 10px rgb(146 109 222 / 40%);
+}
+
+.question-btn > span {
+    display: block;
+}
+
+.number-correct-answers {
+    text-align: right;
+}
+
+.number-correct-answers > span {
+    color: var(--green);
+}
+
+.form-answers {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.answer {
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+}
+
+.answer > span {
+    line-height: 1.5;
+    margin-left: 0.5rem;
+}
+
+.answer > input {
+    flex: 1;
+    appearance: none;
+    height: 1.5rem;
+    max-width: 1.5rem;
+    min-width: 1.5rem;
+    border: 1px solid #757575;
+    transition: all 100ms;
+    cursor: pointer;
+    position: relative;
+}
+
+.answer > input:hover {
+    background-color: #f1f1f1;
+}
+
+.answer > input.checked-answer {
+    background-color: initial;
+}
+
+.answer > input::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 7px;
+    width: 45%;
+    height: 80%;
+    background-color: transparent;
+    border: 2px solid;
+    border-color: transparent var(--green) var(--green) transparent;
+    transform: rotate(45deg) scale(0);
+    transform-origin: center center;
+    transition: all 200ms;
+}
+
+.answer > input.checked-answer::before{
+    transform: rotate(45deg) scale(1);
+}
+
+.convert-question-btn {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 75em) {
+    .container-questions {
+        transform: translateX(2rem);
+    }
+
+    .questions {
+        justify-content: flex-start;
+    }
+}

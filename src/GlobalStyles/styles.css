@@ -1,0 +1,162 @@
+:root {
+    --blue: #50a1ff;
+    --indigo: #6610f2;
+    --purple: #926dde;
+    --pink: #e83e8c;
+    --red: #ff4954;
+    --orange: #ffbe00;
+    --yellow: #ffba00;
+    --green: #3cd458;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #868e96;
+    --gray-dark: #343a40;
+    --primary: #50a1ff;
+    --secondary: #e9ecf0;
+    --success: #3cd458;
+    --info: #926dde;
+    --warning: #ffba00;
+    --danger: #ff4954;
+    --light: #f8f9fa;
+    --dark: #191919;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.9375rem;
+    font-weight: 300;
+    line-height: 1.9;
+    color: #757575;
+    background-color: #f0f4f7;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    margin-bottom: 0.5rem;
+    font-family: Dosis, sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #323D47;
+    margin-top: 0;
+    letter-spacing: 0.5px;
+}
+
+h2, .h2 {
+    font-size: 1.75rem;
+}
+
+h3, .h3 {
+    font-size: 1.5rem;
+}
+
+h4, .h4 {
+    font-size: 1.25rem;
+}
+
+h5, .h5 {
+    font-size: 1rem;
+}
+
+h6, .h6 {
+    font-size: 0.85rem;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: #757575;
+}
+
+hr {
+    margin: 2rem auto;
+    border: 0;
+    border-top: 1px solid rgba(117, 117, 117, 0.09);
+}
+
+.shadow-5, .hover-shadow-5:hover, .portfolio-2 img:hover {
+    box-shadow: 0 0 26px rgb(0 0 0 / 6%);
+}
+
+.bg-light {
+    background-color: var(--light) !important;
+}
+
+.bg-img {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.padding-15 {
+    padding: 0.9375rem;
+}
+
+.padding-0-15 {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+}
+
+.padding-8-0 {
+    padding: 0.5rem 0;
+}
+.pt-24 {
+    padding-top: 1.5rem;
+}
+
+.pb-70 {
+    padding-bottom: 4.375rem;
+}
+
+.mt-48 {
+    margin-top: 3rem;
+}
+
+.margin-32-0 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.section-header {
+    text-align: center;
+    max-width: 70%;
+    margin: 0 auto 70px;
+}
+
+.section-header > hr {
+    width: 50px;
+}
+
+.lead, .pricing-4 .plan-price p {
+    font-size: 1.125rem;
+    font-weight: 300;
+}
+
+.space {
+    height: 30px;
+    width: 100%;
+}
+
+code {
+    font-size: 87.5%;
+    color: var(--pink);
+    word-wrap: break-word;
+}

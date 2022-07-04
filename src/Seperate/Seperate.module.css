@@ -1,0 +1,23 @@
+.seperate {
+    display: flex;
+    align-items: center;
+    color: #929daf;
+    font-size: 0.8375rem;
+    letter-spacing: .5px;
+    text-transform: capitalize;
+}
+
+.seperate::before, .seperate::after {
+    content: "";
+    width: var(--width);
+    border-top: 1px solid #eaeff4;
+    flex: 1;
+}
+
+.seperate::before {
+    margin-right: 1rem;
+}
+
+.seperate::after {
+    margin-left: 1rem;
+}
