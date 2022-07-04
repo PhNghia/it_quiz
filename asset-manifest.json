@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/it_quiz/static/css/main.437f5e12.css",
+    "main.js": "/it_quiz/static/js/main.fc3ca709.js",
+    "static/media/docker.jpg": "/it_quiz/static/media/docker.25388989b2072d8b48a2.jpg",
+    "static/media/devops.jpg": "/it_quiz/static/media/devops.1ea823f59657ea8a2882.jpg",
+    "static/media/modal.jpg": "/it_quiz/static/media/modal.947326d6417a2e0ad3ed.jpg",
+    "static/media/linux.jpg": "/it_quiz/static/media/linux.0fd288d466d9ef2fd031.jpg",
+    "static/media/bash.jpg": "/it_quiz/static/media/bash.040461fff7b8c2132f42.jpg",
+    "static/media/sql.jpg": "/it_quiz/static/media/sql.0022585227cba94e781a.jpg",
+    "static/media/cms.jpg": "/it_quiz/static/media/cms.e1f8ef17032ad6a56c8a.jpg",
+    "static/media/code.jpg": "/it_quiz/static/media/code.2a99dde1dd979ae94c7c.jpg",
+    "index.html": "/it_quiz/index.html",
+    "main.437f5e12.css.map": "/it_quiz/static/css/main.437f5e12.css.map",
+    "main.fc3ca709.js.map": "/it_quiz/static/js/main.fc3ca709.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.437f5e12.css",
+    "static/js/main.fc3ca709.js"
+  ]
+}
