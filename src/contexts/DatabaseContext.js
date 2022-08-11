@@ -47,6 +47,19 @@ export function DatabaseProvider({ children }) {
         update(ref(database), {
             [pathUser]: { ...profileUser, ...propsProfile }
         })
+        syncProfileDataOnRanks({ ...profileUser, ...propsProfile })
+    }
+
+    function syncProfileDataOnRanks (profile) {
+        const categoryOfRanks = [...Object.keys(ranks)]
+        categoryOfRanks.forEach(key => {
+            const user = ranks[key].find(result => result.currentUser.uid === profile.uid)
+            if (!user) return
+            const path = `ranks/${key}/${currentUser.uid}/currentUser`
+            update(ref(database), {
+                [path]: { ...profile }
+            })
+        })
     }
 
     function getResults() {

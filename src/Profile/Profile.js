@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
 import { useDatabase } from '../contexts/DatabaseContext'
@@ -10,9 +10,11 @@ export default function Profile() {
 
   function handleUpdatePresidentImg(e) {
     const file = e.target.files[0]
+    if (!file) return
     const reader = new FileReader()
     reader.readAsDataURL(file)
     reader.onload = () => {
+      if (profileUser.photoURL === reader.result) return
       updateProfileUserFromDatabase(currentUser, { photoURL: reader.result })
     }
   }
@@ -31,6 +33,10 @@ export default function Profile() {
       according.style.height = 0
     }
   }
+
+  useEffect(() => {
+    document.title = `IT Quiz - Profile`
+  }, [])
 
   return (
     <div className="padding-0-15">
