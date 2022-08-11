@@ -1,8 +1,12 @@
 import { useEffect } from 'react'
 import List from './List'
+import { useDatabase } from '../contexts/DatabaseContext'
+import EmptyList from '../EmptyList/EmptyList'
 import styles from './QuizesResults.module.css'
 
 export default function QuizesResults() {
+
+  const { results } = useDatabase()
 
   useEffect(() => {
     document.title = 'IT Quiz - Results'
@@ -13,9 +17,13 @@ export default function QuizesResults() {
       <header className='section-header'>
         <h2>Results</h2>
         <hr></hr>
-        <p className={styles['sub-heading-results']}>View your results</p>
+        {results && results.length > 0 && <p className={styles['sub-heading-results']}>View your results</p>}
+        {(!results || results.length == 0) && <EmptyList />} 
       </header>
-      <List />
+
+      
+
+      {results && results.length > 0 && <List />}
     </div>
   )
 }

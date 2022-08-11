@@ -1,0 +1,11 @@
+.empty-list {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.empty-title {
+    font-size: 18px;
+    color: #757575;
+}

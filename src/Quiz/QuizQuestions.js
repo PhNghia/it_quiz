@@ -4,7 +4,6 @@ import Button from '../Button'
 import Seperate from '../Seperate'
 
 export default function QuizQuestions({ questions }) {
-
     /** question => {
          *  question,
          *  answers,
@@ -98,7 +97,7 @@ export default function QuizQuestions({ questions }) {
                         <div key={index} className={styles.answer}>
                             <input
                                 type="checkbox"
-                                checked={currentQuestion.selectedAnswers[index]}
+                                checked={Boolean(currentQuestion.selectedAnswers[index])}
                                 className={currentQuestion.selectedAnswers[index] ? styles['checked-answer'] : undefined}
                                 onChange={() => handleSelectedAnswer(index)}
                             />

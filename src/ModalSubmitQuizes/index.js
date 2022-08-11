@@ -2,7 +2,7 @@ import styles from './ModalSubmitQuizes.module.css'
 import Button from '../Button'
 
 
-function ModalSubmitQuizes({ nameCurrentQuiz, setOpen, getResult }) {
+function ModalSubmitQuizes({ setOpen, getResult }) {
 
     return (
         <div className={styles['container']}>
@@ -36,7 +36,6 @@ function ModalSubmitQuizes({ nameCurrentQuiz, setOpen, getResult }) {
                                 getResult()
                                 setOpen(false);
                             }}
-                            link={`/results/${nameCurrentQuiz}`}
                         />
                     </div>
                 </div>

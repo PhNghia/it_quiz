@@ -1,29 +1,11 @@
 import { useContext, useEffect, useState } from 'react'
-import { QuizesContext } from './QuizesContext'
+import { QuizesContext } from './contexts/QuizesContext'
 
 export function useQuizesContext () {
     const [state, dispatch] = useContext(QuizesContext)
     return [state, dispatch]
 }
 
-function getSavedValue (key, initialValue) {
-    const savedValue = JSON.parse(localStorage.getItem(key))
+export function useFileReaderAsDataURL () {
     
-    if (savedValue) return savedValue
-
-    if (initialValue instanceof Function) return initialValue()
-
-    return initialValue
-}
-
-export function useLocalStorage (key, initialValue) {
-    const [value, setValue] = useState(() => {
-        return getSavedValue(key, initialValue)
-    })
-
-    useEffect(() => {
-        localStorage.setItem(key, JSON.stringify(value))
-    }, [value])
-
-    return [value, setValue]
 }

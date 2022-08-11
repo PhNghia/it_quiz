@@ -14,7 +14,7 @@ export default function QuizResultQuestion({ resultQuestion, index }) {
                     <ul className={styles['list-results']}>
                         {resultQuestion.answers.map((answer, index) => (
                             <li key={index}>
-                                <span style={{ '--clr-answer': resultQuestion.selectedAnswers[index] ? 'var(--success)' : 'var(--danger)' }}>{resultQuestion.selectedAnswers[index] ? <i className="fa-solid fa-circle-check"></i> : <i className="fa-solid fa-circle-xmark"></i> }</span>
+                                <span style={{ '--clr-answer': (resultQuestion.selectedAnswers[index]).toString() === "true" ? 'var(--success)' : 'var(--danger)' }}>{resultQuestion.selectedAnswers[index] ? <i className="fa-solid fa-circle-check"></i> : <i className="fa-solid fa-circle-xmark"></i> }</span>
                                 {answer}
                             </li>
                         ))}

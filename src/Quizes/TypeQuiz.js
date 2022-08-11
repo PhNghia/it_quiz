@@ -1,10 +1,11 @@
 import { useEffect } from 'react'
-import { actions } from '../QuizesContext'
+import { actions } from '../contexts/QuizesContext'
 import { useQuizesContext } from '../hooks'
+import { useAuth } from '../contexts/AuthContext'
 import Button from '../Button'
 
 export default function TypeQuiz() {
-
+  const { currentUser } = useAuth()
   const [state, dispatch] = useQuizesContext()
 
   useEffect(() => {
@@ -12,7 +13,7 @@ export default function TypeQuiz() {
   }, [])
 
   function callback () {
-    dispatch(actions.chooseTypeQuiz('random_quiz'))
+    dispatch(actions.setTypeQuiz('random_quiz'))
 
     document.body.scrollTop = 0
     document.documentElement.scrollTop = 0
@@ -55,7 +56,7 @@ export default function TypeQuiz() {
             isFullWidth: true
           }}
           callback={callback}
-          link='random_quiz'
+          link={currentUser ? '/random_quiz' : '/login'}
         />
       </div>
     </div>
