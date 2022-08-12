@@ -51,6 +51,7 @@
 
 .quizes-sidebar>div>ul>li>a,
 .quizes-sidebar>div>p>a {
+    font-size: 15px;
     padding: 6px 16px;
     border-radius: 10rem;
     color: rgba(0, 0, 0, 0.6);

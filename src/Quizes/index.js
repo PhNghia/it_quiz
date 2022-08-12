@@ -11,7 +11,6 @@ export { CategoryQuiz, TypeQuiz }
 
 export default function Quizes() {
     const { currentUser, logout } = useAuth()
-    const { profileUser, updateProfileUserFromDatabase } = useDatabase()
     const ulRef = useRef()
 
     const [page, setPage] = useState(() => {
