@@ -97,8 +97,8 @@ export function DatabaseProvider({ children }) {
             if (data) {
                 const ranks = {}
                 const sortRanks = (result1, result2) => {
-                    if (result1.score < result2.score) return 1
-                    if (result1.score > result2.score) return -1
+                    if ((result1.score) < (result2.score)) return 1
+                    if ((result1.score) > (result2.score)) return -1
                     if (result1.duringMiliseconds > result2.duringMiliseconds) return 1
                     if (result1.duringMiliseconds < result2.duringMiliseconds) return -1
                     if (result1.timeStamp > result2.timeStamp) return 1

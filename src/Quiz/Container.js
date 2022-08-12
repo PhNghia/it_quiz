@@ -88,7 +88,7 @@ export default function Container({ valueProp }) {
     }).length
 
     const date = new Date()
-    const score = ((partCorrect / questions.length) * 100).toFixed(0)
+    const score = Number(((partCorrect / questions.length) * 100).toFixed(0))
     const topic = category.name
     const grade = (() => {
       if (score >= 80) return 'A'
