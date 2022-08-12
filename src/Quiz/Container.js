@@ -41,7 +41,7 @@ export default function Container({ valueProp }) {
     })
       .then(res => {
         setLoading(false)
-        nameCurrentQuiz.current = `${profileUser.displayName.replaceAll(" ", "_")}-random_quiz-${state.categoryQuiz.value}-${v4().slice(0, 6)}`
+        nameCurrentQuiz.current = `random_quiz-${state.categoryQuiz.value}-${v4().slice(0, 6)}`
 
         startTime.current = new Date()
         setQuestions(() => {

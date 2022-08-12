@@ -6,7 +6,7 @@ import styles from './QuizesResults.module.css'
 
 export default function List() {
 
-  const { results, removeResult } = useDatabase()
+  const { results, removeResult, profileUser } = useDatabase()
   const [show, setShow] = useState(false)
   const [result, setResult] = useState()
 
@@ -28,7 +28,7 @@ export default function List() {
           return (
             <article key={index} className={`${styles['article-result']} padding-0-15`}>
               <span className={styles['remove-btn']} onClick={() => {setShow(true); setResult(item)}}><i className="fa-solid fa-xmark"></i></span>
-              <h5>{item.name}</h5>
+              <h5>{`${profileUser.displayName.replaceAll(" ", "_")}-${item.name}`}</h5>
               <div className={styles['article-content']}>
                 <div className={styles['article-info']}>
                   <p>Date: <span>{`Ngày ${date.getDate()} Tháng ${date.getMonth() + 1} Năm ${date.getFullYear()}`}</span></p>

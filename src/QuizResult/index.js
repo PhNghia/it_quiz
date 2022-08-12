@@ -1,9 +1,11 @@
 import React, { useCallback,  useEffect } from 'react'
 import QuizResultQuestion from './QuizResultQuestion'
 import Seperate from '../Seperate'
+import { useDatabase } from '../contexts/DatabaseContext'
 import styles from './QuizResult.module.css'
 
 export default function QuizResult({ result }) {
+    const { profileUser } = useDatabase()
 
     useEffect(() => {   
         document.title = 'IT Quiz - Quiz Result'
@@ -18,7 +20,7 @@ export default function QuizResult({ result }) {
     return (
         <div className={`${styles['container']} padding-0-15 pt-24 pb-70`}>
             <header className="section-header">
-                <h4>Quiz : {result.name}</h4>
+                <h4>Quiz : {`${profileUser.displayName.replaceAll(" ", "_")}-${result.name}`}</h4>
             </header>
 
             <Seperate content="Quiz Information" isFullWidth styles={{ marginTop: '1.85rem', marginBottom: '1.85rem' }} />

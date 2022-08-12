@@ -53,6 +53,7 @@ export default function Profile() {
             <input
               type="file"
               title="Change your president image"
+              accept="image/*"
               onChange={handleUpdatePresidentImg}
             />
             <div className={style['circle-img']}>
