@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/it_quiz/static/css/main.e44a2186.css",
-    "main.js": "/it_quiz/static/js/main.beebe5fb.js",
+    "main.css": "/it_quiz/static/css/main.bb6e8235.css",
+    "main.js": "/it_quiz/static/js/main.caf24dc5.js",
     "static/media/docker.jpg": "/it_quiz/static/media/docker.25388989b2072d8b48a2.jpg",
     "static/media/devops.jpg": "/it_quiz/static/media/devops.1ea823f59657ea8a2882.jpg",
     "static/media/modal.jpg": "/it_quiz/static/media/modal.947326d6417a2e0ad3ed.jpg",
@@ -12,11 +12,11 @@
     "static/media/cms.jpg": "/it_quiz/static/media/cms.e1f8ef17032ad6a56c8a.jpg",
     "static/media/code.jpg": "/it_quiz/static/media/code.2a99dde1dd979ae94c7c.jpg",
     "index.html": "/it_quiz/index.html",
-    "main.e44a2186.css.map": "/it_quiz/static/css/main.e44a2186.css.map",
-    "main.beebe5fb.js.map": "/it_quiz/static/js/main.beebe5fb.js.map"
+    "main.bb6e8235.css.map": "/it_quiz/static/css/main.bb6e8235.css.map",
+    "main.caf24dc5.js.map": "/it_quiz/static/js/main.caf24dc5.js.map"
   },
   "entrypoints": [
-    "static/css/main.e44a2186.css",
-    "static/js/main.beebe5fb.js"
+    "static/css/main.bb6e8235.css",
+    "static/js/main.caf24dc5.js"
   ]
 }
