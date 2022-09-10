@@ -136,7 +136,7 @@ export default function Container({ valueProp }) {
   }
 
   function handleChangeRank(result) {
-    if (result.score < 50) return
+    //if (result.score < 50) return
     const valueOfCategory = result.category.value
     if (ranks && ranks[valueOfCategory] && ranks[valueOfCategory][profileUser.uid]) {
       const currentBestResult = ranks[valueOfCategory][profileUser.uid]
