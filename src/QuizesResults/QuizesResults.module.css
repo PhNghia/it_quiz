@@ -10,19 +10,23 @@
 }
 
 .article-result {
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.article-result > div {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
     padding: 1rem 0;
-    border: 1px solid #f1f1f1;
     border-radius: 8px;
-    overflow: hidden;
-    transition: all 200ms;
+    border: 1px solid #f1f1f1;
+    transition: border 200ms;
 }
 
-.article-result:hover {
+.article-result > div:hover {
     box-shadow: 0 0 16px rgb(0 0 0 / 8%);
     color: #757575;
 }
@@ -48,12 +52,12 @@
     background-color: #dddddd;
 }
 
-.article-result:hover > .remove-btn,
-.article-result:focus > .remove-btn {
+.article-result > div:hover > .remove-btn,
+.article-result > div:focus > .remove-btn {
     visibility: visible;
 }
 
-.article-result > h5 {
+.article-result > div > h5 {
     font-size: 1.2rem;
     text-align: center;
 }

@@ -41,7 +41,7 @@ export default function Container({ valueProp }) {
     })
       .then(res => {
         setLoading(false)
-        nameCurrentQuiz.current = `random_quiz-${state.categoryQuiz.value}-${v4().slice(0, 6)}`
+        nameCurrentQuiz.current = `random_quiz-${category.value}-${v4().slice(0, 6)}`
 
         startTime.current = new Date()
         setQuestions(() => {
@@ -136,10 +136,14 @@ export default function Container({ valueProp }) {
   }
 
   function handleChangeRank(result) {
-    //if (result.score < 50) return
+    if (result.score <= 0) return
     const valueOfCategory = result.category.value
-    if (ranks && ranks[valueOfCategory] && ranks[valueOfCategory][profileUser.uid]) {
-      const currentBestResult = ranks[valueOfCategory][profileUser.uid]
+    if (ranks && ranks[valueOfCategory]) {
+      const currentBestResult = ranks[valueOfCategory].find(rank => rank.currentUser.uid === result.currentUser.uid)
+      if (!currentBestResult) {
+        updateRankWithNewResult(result)
+        return
+      }
       if (result.score < currentBestResult.score) return
       if (result.score > currentBestResult.score) {
         updateRankWithNewResult(result)
